@@ -1,25 +1,51 @@
 package supermarket.item;
 
-import java.math.BigDecimal;
-
 /**
  * Shopping item.
+ * 
  * @author louistaub
  *
  */
 public abstract class Item {
-	private BigDecimal price;
-	
+	private int price;
+
 	/**
-	 * Big decimal, for currency accuracy.
-	 * @return price.
+	 * Initialise item and set price, ensure zero or negative prices cannot be
+	 * applied.
+	 * 
+	 * @param price
 	 */
-	public BigDecimal getPrice() {
+	public Item(int price) {
+		if (price < 1) {
+			throw new IllegalArgumentException("Cannot set zero or negative price.");
+		} else {
+			this.price = price;
+		}
+	}
+
+	/**
+	 * Integer used for currency accuracy.
+	 * 
+	 * @return the item price.
+	 */
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(BigDecimal price) {
+
+	/**
+	 * Set the price.
+	 * 
+	 * @param price
+	 *            of Item
+	 */
+	public void setPrice(int price) {
 		this.price = price;
 	}
-	public abstract String getItemType();	
-	
+
+	/**
+	 * 
+	 * @return the items type.
+	 */
+	public abstract ItemType getItemType();
+
 }

@@ -1,22 +1,25 @@
 package supermarket.item;
 
-import java.math.BigDecimal;
-
 /**
  * Orange shopping item.
- * @author louistaub
+ * 
+ * @author Louis Taub
  *
  */
 public class Orange extends Item {
 
-	private static final String ITEM_TYPE = "Orange";
-	
-	public Orange(BigDecimal price){
-		this.setPrice(price);
+	private static final ItemType ITEM_TYPE = ItemType.ORANGE;
+
+	/**
+	 * @param price
+	 *            create new item and set price.
+	 */
+	public Orange(int price) {
+		super(price);
 	}
-	
+
 	@Override
-	public String getItemType(){
+	public ItemType getItemType() {
 		return ITEM_TYPE;
 	}
 }
