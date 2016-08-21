@@ -23,7 +23,7 @@ Switch from the big decimal type to integer to avoid loss of precision on the fl
 </p>
 <p>
 2 addition JUnit tests added. 
-<ol><li>One to test the adding 3 oranges and 2 apples with 3 for 2 promotion on the oranges and 2 for 1 promotion on apples.  The total price should be the same as 2 oranges and 1 apple.
+<ul><li>One to test the adding 3 oranges and 2 apples with 3 for 2 promotion on the oranges and 2 for 1 promotion on apples.  The total price should be the same as 2 oranges and 1 apple.
 </li>
 <li>
 The other test is negative to check that negative prices for items cannot be set.  This should raise an exception.
@@ -31,5 +31,5 @@ The other test is negative to check that negative prices for items cannot be set
 <li>
 The original test is updated to test passing an empty promotion list and this will total prices without any promotions applied.
 </li>
-</ol>
+</ul>
 </p>
